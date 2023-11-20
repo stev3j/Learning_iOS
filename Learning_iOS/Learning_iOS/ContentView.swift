@@ -1,59 +1,87 @@
-//
-//  ContentView.swift
-//  Learning_iOS
-//
-//  Created by 조승완 on 2023/09/30.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
     @State var id: String = ""
     @State var pwd: String = ""
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                EditText(value: id, title: "Id", description: "Enter your id", topPadding: 70)
-                EditText(value: pwd, title: "Password", description: "Enter your password")
+                CustomTextField("Id", "Enter your id", text: $id, topPadding: 70)
+                CustomTextField("Password", "Enter your password", text: $pwd, type: .secured)
                 Spacer()
-                BottomButton(name: "로그인")
+                BottomButton("로그인") {
+                    print("a")
+                }
             }
             .padding(.horizontal, 16)
             .navigationTitle("로그인")
         }
-        
     }
 }
 
-struct EditText: View {
-    @State var value: String
-    @State var title: String
-    @State var description: String
-    @State var topPadding: CGFloat = 16.0
+struct CustomTextField: View {
+
+    let title: String
+    let placeholder: String
+    @Binding var text: String
+    let type: Self.TextFieldType
+    let topPadding: CGFloat
+    
+    init(_ title: String,
+         _ placeholder: String,
+         text: Binding<String>,
+         type: Self.TextFieldType = .default,
+         topPadding: CGFloat = 16) {
+        self.title = title
+        self.placeholder = placeholder
+        self._text = text
+        self.type = type
+        self.topPadding = topPadding
+    }
+    
+    enum TextFieldType {
+        case `default`
+        case secured
+    }
     
     var body: some View {
         Text(title)
             .font(.headline)
             .padding(.top, topPadding)
             .padding(.leading, 10)
-        TextField(description, text: $value)
-            .padding()
-            .background(Color(uiColor: .secondarySystemBackground))
-            .cornerRadius(16)
+        Group {
+            switch type {
+            case .default:
+                TextField(placeholder, text: $text)
+            case .secured:
+                SecureField(placeholder, text: $text)
+            }
+        }
+        .padding()
+        .background(Color(.secondarySystemBackground))
+        .cornerRadius(16)
     }
 }
 
 struct BottomButton: View {
-    @State var name: String = "Button"
+    
+    let name: String
+    let action: () -> Void
+    
+    init(_ name: String, action: @escaping () -> Void) {
+        self.name = name
+        self.action = action
+    }
     
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Button(action: action) {
             Text(name)
                 .padding()
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
-        })
+        }
         .background(Color(uiColor: .black))
         .cornerRadius(16)
     }

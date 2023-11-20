@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290B93752B0910E900140913 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B93742B0910E900140913 /* LoginView.swift */; };
+		290B93782B09ACAA00140913 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 290B93772B09ACAA00140913 /* Alamofire */; };
+		290B937E2B09AF2A00140913 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B937D2B09AF2A00140913 /* LoginRequest.swift */; };
+		290B93812B0A237D00140913 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B93802B0A237D00140913 /* LoginResponse.swift */; };
+		290B93832B0A26D300140913 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B93822B0A26D300140913 /* LoginViewModel.swift */; };
+		290B93892B0B848D00140913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B93882B0B848D00140913 /* Constants.swift */; };
 		2913B9DA2AC8473F00D5D098 /* Learning_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913B9D92AC8473F00D5D098 /* Learning_iOSApp.swift */; };
 		2913B9DC2AC8473F00D5D098 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913B9DB2AC8473F00D5D098 /* ContentView.swift */; };
 		2913B9DE2AC8474200D5D098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2913B9DD2AC8474200D5D098 /* Assets.xcassets */; };
@@ -14,6 +20,7 @@
 		2913B9EB2AC8474200D5D098 /* Learning_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913B9EA2AC8474200D5D098 /* Learning_iOSTests.swift */; };
 		2913B9F52AC8474200D5D098 /* Learning_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913B9F42AC8474200D5D098 /* Learning_iOSUITests.swift */; };
 		2913B9F72AC8474200D5D098 /* Learning_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913B9F62AC8474200D5D098 /* Learning_iOSUITestsLaunchTests.swift */; };
+		2913BA042AC9979300D5D098 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913BA032AC9979300D5D098 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290B93742B0910E900140913 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		290B937D2B09AF2A00140913 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		290B93802B0A237D00140913 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		290B93822B0A26D300140913 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		290B93882B0B848D00140913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2913B9D62AC8473F00D5D098 /* Learning_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learning_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2913B9D92AC8473F00D5D098 /* Learning_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_iOSApp.swift; sourceTree = "<group>"; };
 		2913B9DB2AC8473F00D5D098 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +56,7 @@
 		2913B9F02AC8474200D5D098 /* Learning_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Learning_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2913B9F42AC8474200D5D098 /* Learning_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_iOSUITests.swift; sourceTree = "<group>"; };
 		2913B9F62AC8474200D5D098 /* Learning_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2913BA032AC9979300D5D098 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290B93782B09ACAA00140913 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +85,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290B93722B0910D000140913 /* Flick_Test */ = {
+			isa = PBXGroup;
+			children = (
+				290B938C2B0B854100140913 /* Feature */,
+				290B938A2B0B84EE00140913 /* Service */,
+			);
+			path = Flick_Test;
+			sourceTree = "<group>";
+		};
+		290B93732B0910DC00140913 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				290B93742B0910E900140913 /* LoginView.swift */,
+				290B93822B0A26D300140913 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		290B937C2B09AF1D00140913 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				290B937D2B09AF2A00140913 /* LoginRequest.swift */,
+				290B93802B0A237D00140913 /* LoginResponse.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		290B93872B0B847C00140913 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		290B938A2B0B84EE00140913 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				290B938B2B0B851100140913 /* Router */,
+				290B937C2B09AF1D00140913 /* Data */,
+				290B93872B0B847C00140913 /* Configuration */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		290B938B2B0B851100140913 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		290B938C2B0B854100140913 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				290B93732B0910DC00140913 /* Login */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		2913B9CD2AC8473F00D5D098 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +167,13 @@
 		2913B9D82AC8473F00D5D098 /* Learning_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				290B93722B0910D000140913 /* Flick_Test */,
+				290B93882B0B848D00140913 /* Constants.swift */,
 				2913B9D92AC8473F00D5D098 /* Learning_iOSApp.swift */,
 				2913B9DB2AC8473F00D5D098 /* ContentView.swift */,
 				2913B9DD2AC8474200D5D098 /* Assets.xcassets */,
 				2913B9DF2AC8474200D5D098 /* Preview Content */,
+				2913BA032AC9979300D5D098 /* ListView.swift */,
 			);
 			path = Learning_iOS;
 			sourceTree = "<group>";
@@ -143,6 +219,9 @@
 			dependencies = (
 			);
 			name = Learning_iOS;
+			packageProductDependencies = (
+				290B93772B09ACAA00140913 /* Alamofire */,
+			);
 			productName = Learning_iOS;
 			productReference = 2913B9D62AC8473F00D5D098 /* Learning_iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +294,9 @@
 				Base,
 			);
 			mainGroup = 2913B9CD2AC8473F00D5D098;
+			packageReferences = (
+				290B93762B09ACAA00140913 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2913B9D72AC8473F00D5D098 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +340,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2913B9DC2AC8473F00D5D098 /* ContentView.swift in Sources */,
+				290B93752B0910E900140913 /* LoginView.swift in Sources */,
+				290B93812B0A237D00140913 /* LoginResponse.swift in Sources */,
 				2913B9DA2AC8473F00D5D098 /* Learning_iOSApp.swift in Sources */,
+				290B937E2B09AF2A00140913 /* LoginRequest.swift in Sources */,
+				2913BA042AC9979300D5D098 /* ListView.swift in Sources */,
+				290B93832B0A26D300140913 /* LoginViewModel.swift in Sources */,
+				290B93892B0B848D00140913 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +512,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Learning_iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Learning-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -452,7 +540,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Learning_iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Learning-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -582,6 +670,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		290B93762B09ACAA00140913 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		290B93772B09ACAA00140913 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 290B93762B09ACAA00140913 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2913B9CE2AC8473F00D5D098 /* Project object */;
 }
